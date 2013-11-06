@@ -1,0 +1,80 @@
+html, body {
+  background: white;
+  height: 100%;
+  min-width: 640px;
+}
+* {
+  @include box-sizing(border-box);
+}
+body {
+    color: $colorDefault;
+    font-family: $fontDefault;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+p {
+    margin: 0 0 10px;
+}
+
+a {
+  @include link-colors($colorLink, $colorLink, $colorLink, $colorLink, $colorLink);
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+h1, .h1 {
+  font-size: 52px;
+  line-height: 100%;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+code {
+    background-color: #F9F2F4;
+    color: #C7254E;
+    font-size: 90%;
+    padding: 2px 4px;
+}
+code, pre {
+    border-radius: 4px;
+    color: #333333;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 12px;
+    padding: 0 3px 2px;
+}
+
+.highlight {
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    padding: 9px 14px;
+}
+.highlight pre {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0 none;
+    margin-bottom: 0;
+    padding: 0;
+}
+.highlight pre code {
+    color: #333333;
+    font-size: inherit;
+}
+.highlight pre .lineno {
+    color: #BEBEC5;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 5px;
+    text-align: right;
+    width: 22px;
+}

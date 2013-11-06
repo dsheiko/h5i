@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+    <!-- Place anything custom after this. -->
+  </head>
+  <body data-target=".contents" data-spy="scroll">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+    <section class="contents">
+      <header class="header">
+        <h2 class="heading">H5 Idioms</h2>
+        <h2 class="logo">H5I</h2>
+      </header>
+      <form  class="secondary-nav"><select name="search">{% include select.html %}</select></form>
+      <nav class="nav">
+        <ul>
+          {% include docs-nav.html %}
+        </ul>
+      </nav>
+    </section>
+
+    <section class="doc">
+      <header id="start" class="header">
+        <h1>Idioms of semantic HTML</h1>
+        <p>
+          High quality HTML markup means semantic HTML (one that defines meaning of the information in webpages rather than its representation).
+          Considering micro-formats and new elements and attributes introduced in HTML5 it may take much time
+          to design semantically valid markup even working on generic tasks.
+          This collection of semantic HTML idioms (patterns) is meant to save this time.</p>
+      </header>
+      <article class="article">
+        {{ content }}
+      </article>
+    </section>
+    <a class="docs-top affix" href="#start">
+        Back to top
+    </a>
+    {% include colophon.html %}
+    {% include footer.html %}
+  </body>
+</html>

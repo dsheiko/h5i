@@ -1,0 +1,142 @@
+.contents {
+  background-color: #DDE6F2;
+  bottom: 0;
+  @include box-shadow( -1px 0 0 #C4D2EA inset );
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  @include text-shadow( 0 1px 0 #FFFFFF );
+  top: 0;
+  width: 240px;
+  .header {
+    .heading {
+      margin: 0 0 25px;
+      font-size: 24.5px;
+      border-bottom: 1px solid #AEC2E1;
+      @include box-shadow( 0 1px 0 #FFFFFF );
+      color: $colorBold;
+      display: block;
+      padding: 15px 25px;
+      line-height: 120%;
+    }
+    .logo {
+      display: none;
+      font-size: 24.5px;
+      color: $colorBold;
+      padding: 15px 25px;
+      margin: 0;
+    }
+  }
+  .nav {
+    > ul {
+      list-style: none;
+      padding-left: 0;
+      > li {
+        display: block;
+        line-height: 20px;
+        a {
+          color: $colorDark;
+          display: block;
+          padding: 4px 25px;
+        }
+        &.active {
+          > a {
+            @include link-colors($colorBold, $colorBold, $colorBold, $colorBold, $colorBold);
+            border-right: 1px solid $colorBold;
+            font-weight: 500;
+          }
+          h1 {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+.doc {
+  margin-left: 280px;
+  max-width: 860px;
+  > .header {
+    color: $colorBold;
+    padding-top: 60px;
+    p {
+      font-size: 22px;
+      line-height: 120%;
+    }
+  }
+  .article {
+    h2 {
+      padding-top: 30px;
+      margin-top: 15px;
+      border-top: 1px solid #2078AA;
+    }
+  }
+}
+
+.secondary-nav {
+  display: none;
+  position: fixed;
+  width: 200px;
+  right: 15px;
+  top: 15px;
+  select {
+    width: 100%;
+  }
+}
+
+
+.docs-top.affix {
+  bottom: 15px;
+  position: fixed;
+  right: 15px;
+}
+
+.docs-top {
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  color: #999999;
+  float: left;
+  font-weight: 500;
+  padding: 7px 15px;
+  &:hover {
+    background-color: #999999;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+#footer {
+  border-top: 1px solid #E5E5E5;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contents {
+    bottom: auto;
+    height: auto;
+    width: 100%;
+    overflow-y: auto;
+    .header {
+      .heading {
+        display: none;
+      }
+      .logo {
+        display: block;
+      }
+    }
+  }
+  .nav {
+    display: none;
+  }
+  .secondary-nav {
+    display: block;
+  }
+  .doc {
+    margin: 80px 25px 0 25px;
+  }
+}

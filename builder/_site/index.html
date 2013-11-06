@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+            <meta charset="utf-8">
+        <title>HTML5 Templates</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="./assets/css/stylesheet.css">
+        <!--[if lt IE 9]>
+            <script src="./assets/html5.js"></script>
+        <![endif]-->
+    <!-- Place anything custom after this. -->
+  </head>
+  <body data-target=".contents" data-spy="scroll">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+    <section class="contents">
+      <header class="header">
+        <h2 class="heading">H5 Idioms</h2>
+        <h2 class="logo">H5I</h2>
+      </header>
+      <form  class="secondary-nav"><select name="search"><option value="#article-details"> Article details</option>
+<option value="#article-list"> Article list</option>
+<option value="#bread-crumbs"> Bread crumb navigation</option>
+<option value="#company-info"> Company info</option>
+<option value="#conversations"> Conversations</option>
+<option value="#download-link"> Download link</option>
+<option value="#figure"> Figure + WAI-ARIA</option>
+<option value="#footnotes-annotations"> Footnotes: annotations</option>
+<option value="#footnotes-side-notes"> Footnotes: side notes</option>
+<option value="#glossary"> Glossary of terms</option>
+<option value="#holy-grail-layout"> Holy Grail Layout</option>
+<option value="#meta-data"> Metadata</option>
+<option value="#quotation"> Quotation</option>
+<option value="#subheadings"> Subheadings, subtitles, alternative titles and taglines</option>
+<option value="#tag-cloud"> Tag clouds</option>
+<option value="#video"> Video</option>
+</select></form>
+      <nav class="nav">
+        <ul>
+          <li><a href="#article-details"> Article details</a></li>
+<li><a href="#article-list"> Article list</a></li>
+<li><a href="#bread-crumbs"> Bread crumb navigation</a></li>
+<li><a href="#company-info"> Company info</a></li>
+<li><a href="#conversations"> Conversations</a></li>
+<li><a href="#download-link"> Download link</a></li>
+<li><a href="#figure"> Figure + WAI-ARIA</a></li>
+<li><a href="#footnotes-annotations"> Footnotes: annotations</a></li>
+<li><a href="#footnotes-side-notes"> Footnotes: side notes</a></li>
+<li><a href="#glossary"> Glossary of terms</a></li>
+<li><a href="#holy-grail-layout"> Holy Grail Layout</a></li>
+<li><a href="#meta-data"> Metadata</a></li>
+<li><a href="#quotation"> Quotation</a></li>
+<li><a href="#subheadings"> Subheadings, subtitles, alternative titles and taglines</a></li>
+<li><a href="#tag-cloud"> Tag clouds</a></li>
+<li><a href="#video"> Video</a></li>
+
+        </ul>
+      </nav>
+    </section>
+
+    <section class="doc">
+      <header id="start" class="header">
+        <h1>Idioms of semantic HTML</h1>
+        <p>
+          High quality HTML markup means semantic HTML (one that defines meaning of the information in webpages rather than its representation).
+          Considering micro-formats and new elements and attributes introduced in HTML5 it may take much time
+          to design semantically valid markup even working on generic tasks.
+          This collection of semantic HTML idioms (patterns) is meant to save this time.</p>
+      </header>
+      <article class="article">
+        <h2 id="article-details">Article details</h2>
+
+<p>Here a comprehensive template for article (news, post, entry) details relying on <a href="http://microformats.org/wiki/hnews">hNews microformat specification</a>.</p>
+
+<h3 id="example-uses">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;hentry&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;entry-title&quot;</span><span class="nt">&gt;</span>But Will It Make You Happy?<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">&quot;updated&quot;</span> <span class="na">datetime=</span><span class="s">&quot;2010-08-07 11:11:03-0400&quot;</span> <span class="na">pubdate</span><span class="nt">&gt;</span>08-07-2010<span class="nt">&lt;/time&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;byline author vcard&quot;</span><span class="nt">&gt;</span>
+        By <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;fn&quot;</span><span class="nt">&gt;</span>Stephanie Rosenbloom<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;entry-content&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+
+      <span class="nt">&lt;figure&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;tammy-strobel.jpg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Portrait of Tammy Strobel&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;figcaption&gt;</span>Tammy Strobel in her pared-down, 400sq-ft apt.<span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;/figure&gt;</span>
+
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+
+      <span class="nt">&lt;aside&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>Share this Article<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li&gt;</span>Facebook<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>Twitter<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>Etc<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/aside&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;entry-content-asset&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;photo-full.png&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;photo.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;The objects Tammy removed from her life after moving&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...article text...<span class="nt">&lt;/p&gt;</span>
+
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;entry-unrelated&quot;</span> <span class="na">href=</span><span class="s">&quot;http://fake.site/&quot;</span><span class="nt">&gt;</span>Find Great Vacations<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      A version of this article appeared in print on August 8,
+      2010, on page BU1 of the New York edition.
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;source-org vcard copyright&quot;</span><span class="nt">&gt;</span>
+        Copyright 2010 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;org fn&quot;</span><span class="nt">&gt;</span>The New York Times Company<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre></div>
+
+<h3 id="source">Source</h3>
+<p><a href="http://www.readability.com/developers/guidelines#reader">http://www.readability.com/developers/guidelines#reader</a></p>
+
+<h2 id="article-list">Article list</h2>
+
+<p>Here a template for article (news, post, entry) list relying on <a href="http://microformats.org/wiki/hnews">hNews microformat specification</a>.</p>
+
+<h3 id="example-uses-1">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;hentry&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;entry-title&quot;</span><span class="nt">&gt;</span>Responsive Web Design with HTML5<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">&quot;updated&quot;</span> <span class="na">datetime=</span><span class="s">&quot;2013-10-31 11:11:03-0400&quot;</span> <span class="na">pubdate</span><span class="nt">&gt;</span>2013-10-31<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;nav&gt;</span>
+        Tags:
+        <span class="nt">&lt;ul</span> <span class="na">rel=</span><span class="s">&quot;tag&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;</span>HTML5<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>RWD<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;entry-summary&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>...article summary text...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">&quot;bookmark&quot;</span> <span class="na">href=</span><span class="s">&quot;http://dsheiko.com/weblog/responsive-web-design-with-html5/&quot;</span><span class="nt">&gt;</span>Read Article<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div>
+
+<h2 id="bread-crumbs">Bread crumb navigation</h2>
+
+<p>The template shows markup for a generic widget used to indicate current page within the pagination path.
+The path direction is represented by the right arrow symbol “→” and text lables provide user context.</p>
+
+<h3 id="example-uses-2">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>You are here:<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;navlist&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Main<span class="nt">&lt;/a&gt;</span> →<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/products/&quot;</span><span class="nt">&gt;</span>Products<span class="nt">&lt;/a&gt;</span> →<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/products/dishwashers/&quot;</span><span class="nt">&gt;</span>Dishwashers<span class="nt">&lt;/a&gt;</span> →<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a&gt;</span>Second hand<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div>
+
+<h3 id="source-1">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up</a></p>
+
+<h2 id="company-info">Company info</h2>
+
+<p>Here a template for company information mark up relying on <a href="http://microformats.org/wiki/vcard">vCard microformat specification</a>.</p>
+
+<h3 id="example-uses-3">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;vcard&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;fn org&quot;</span><span class="nt">&gt;</span>Crytek Frankfurt<span class="nt">&lt;/span&gt;</span>
+   Located at
+    <span class="nt">&lt;address</span> <span class="na">class=</span><span class="s">&quot;adr&quot;</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;street-address&quot;</span><span class="nt">&gt;</span>Grüneburgweg 16-18<span class="nt">&lt;/span&gt;</span>,
+       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;locality&quot;</span><span class="nt">&gt;</span>Frankfurt am Main<span class="nt">&lt;/span&gt;</span>,
+       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;region&quot;</span><span class="nt">&gt;</span>Germany<span class="nt">&lt;/span&gt;</span>.
+    <span class="nt">&lt;/address&gt;</span>
+    <span class="nt">&lt;figure&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;logo&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.example.com/logo.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Crytek logo&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;figcaption&gt;</span>Crytek Frankfurt<span class="nt">&lt;/figcaption&gt;</span>
+    <span class="nt">&lt;/figure&gt;</span>
+   Phone: <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tel&quot;</span> <span class="na">href=</span><span class="s">&quot;tel:+111-111-111&quot;</span><span class="nt">&gt;</span>111-111-111<span class="nt">&lt;/a&gt;</span>
+   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://crytek.com&quot;</span> <span class="na">class=</span><span class="s">&quot;url&quot;</span><span class="nt">&gt;</span>http://crytek.com<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+<h3 id="source-2">Source</h3>
+<p><a href="https://support.google.com/webmasters/answer/146861">https://support.google.com/webmasters/answer/146861</a></p>
+
+<h2 id="conversations">Conversations</h2>
+
+<p>As HTML does not have any explicit way to mark up interactive conversations, here goes an example provided by W3C that can be used as a template for the case.</p>
+
+<h3 id="example-uses-4">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;</span> Next, you meet a fisherman. You can say one of several greetings:
+<span class="nt">&lt;/p&gt;&lt;dl&gt;</span>
+ <span class="nt">&lt;dt&gt;</span> &quot;Hello there!&quot;
+ <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span>
+  <span class="nt">&lt;p&gt;</span> He responds with &quot;Hello, how may I help you?&quot;; you can respond with:
+  <span class="nt">&lt;/p&gt;&lt;dl&gt;</span>
+   <span class="nt">&lt;dt&gt;</span> &quot;I would like to buy a fish.&quot;
+   <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> He sells you a fish and the conversation finishes.
+   <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;dt&gt;</span> &quot;Can I borrow your boat?&quot;
+   <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span>
+    <span class="nt">&lt;p&gt;</span> He is surprised and asks &quot;What are you offering in return?&quot;.
+    <span class="nt">&lt;/p&gt;&lt;dl&gt;</span>
+     <span class="nt">&lt;dt&gt;</span> &quot;Five gold.&quot; (if you have enough)
+     <span class="nt">&lt;/dt&gt;&lt;dt&gt;</span> &quot;Ten gold.&quot; (if you have enough)
+     <span class="nt">&lt;/dt&gt;&lt;dt&gt;</span> &quot;Fifteen gold.&quot; (if you have enough)
+     <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> He lends you his boat. The conversation ends.
+     <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;dt&gt;</span> &quot;A fish.&quot; (if you have one)
+     <span class="nt">&lt;/dt&gt;&lt;dt&gt;</span> &quot;A newspaper.&quot; (if you have one)
+     <span class="nt">&lt;/dt&gt;&lt;dt&gt;</span> &quot;A pebble.&quot; (if you have one)
+     <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> &quot;No thanks&quot;, he replies. Your conversation options
+     at this point are the same as they were after asking to borrow
+     his boat, minus any options you&#39;ve suggested before.
+    <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;/dl&gt;</span>
+   <span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;/dl&gt;</span>
+ <span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span> &quot;Vote for me in the next election!&quot;
+ <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> He turns away. The conversation finishes.
+ <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;dt&gt;</span> &quot;Sir, are you aware that your fish are running away?&quot;
+ <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span>
+  <span class="nt">&lt;p&gt;</span> He looks at you skeptically and says &quot;Fish cannot run, sir&quot;.
+  <span class="nt">&lt;/p&gt;&lt;dl&gt;</span>
+   <span class="nt">&lt;dt&gt;</span> &quot;You got me!&quot;
+   <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> The fisherman sighs and the conversation ends.
+   <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;dt&gt;</span> &quot;Only kidding.&quot;
+   <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> &quot;Good one!&quot; he retorts. Your conversation options at this
+   point are the same as those following &quot;Hello there!&quot; above.
+   <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;dt&gt;</span> &quot;Oh, then what are they doing?&quot;
+   <span class="nt">&lt;/dt&gt;&lt;dd&gt;</span> <span class="nt">&lt;p&gt;</span> He looks at his fish, giving you an opportunity to steal
+   his boat, which you do. The conversation ends.
+  <span class="nt">&lt;/p&gt;&lt;/dd&gt;&lt;/dl&gt;</span>
+ <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div>
+
+<h3 id="source-3">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#conversations">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#conversations</a></p>
+
+<h2 id="download-link">Download link</h2>
+
+<p>HTML5 allows you to specify the name, which will be used to store file locally when it is downloaded by the link.</p>
+
+<h3 id="example-uses-5">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- will download as &quot;expenses.pdf&quot; --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/files/adlafjlxjewfasd89asd8f.pdf&quot;</span> <span class="na">download=</span><span class="s">&quot;expenses.pdf&quot;</span><span class="nt">&gt;</span>Download Your Expense Report<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<h3 id="source-4">Source</h3>
+<p><a href="http://www.catswhocode.com/blog/hyper-useful-ready-to-use-html5-snippets">http://www.catswhocode.com/blog/hyper-useful-ready-to-use-html5-snippets</a></p>
+
+<h2 id="figure">Figure + WAI-ARIA</h2>
+
+<p>To declare for wider range of access devices that a reference in the text points
+to some particular <code>figure</code> related with <code>figcaption</code> we group these elements by using attribute <code>aria-labelledby</code>.</p>
+
+<h3 id="example-uses-6">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#fig1&quot;</span><span class="nt">&gt;</span>Figure 1<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;figure</span> <span class="na">id=</span><span class="s">&quot;fig1&quot;</span> <span class="na">role=</span><span class="s">&quot;group&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;caption&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;figcaption</span> <span class="na">id=</span><span class="s">&quot;caption&quot;</span><span class="nt">&gt;</span>Code example<span class="nt">&lt;/figcaption&gt;</span>
+       <span class="nt">&lt;pre&gt;</span>
+       ...
+       <span class="nt">&lt;/pre&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code></pre></div>
+
+<h3 id="source-5">Source</h3>
+<p><a href="http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753">http://www.creativebloq.com/html5/5-html5-and-aria-design-patterns-7133753</a></p>
+
+<h1 id="footnotes-annotations">Footnotes: annotations</h1>
+
+<p>Paragraphs contain links leading to the footnotes, where the note is linked back to the paragraph as well.</p>
+
+<h3 id="example-uses-7">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;article&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  Announcer: Number 16: The <span class="nt">&lt;i&gt;</span>hand<span class="nt">&lt;/i&gt;</span>.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+    Interviewer: Good evening. I have with me in the studio tonight
+    Mr Norman St John Polevaulter, who for the past few years has been
+    contradicting people. Mr Polevaulter, why <span class="nt">&lt;em&gt;</span>do<span class="nt">&lt;/em&gt;</span> you
+    contradict people?
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  Norman: I don&#39;t. <span class="nt">&lt;sup&gt;&lt;a</span> <span class="na">id=</span><span class="s">&quot;r1&quot;</span> <span class="na">href=</span><span class="s">&quot;#fn1&quot;</span><span class="nt">&gt;</span>[1]<span class="nt">&lt;/a&gt;&lt;/sup&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  Interviewer: You told me you did!
+    ...
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+<span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">&quot;fn1&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#r1&quot;</span><span class="nt">&gt;</span>[1]<span class="nt">&lt;/a&gt;</span> This is, naturally, a lie,
+    but paradoxically if it were true he could not say so without
+    contradicting the interviewer and thus making it false.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div>
+
+<h3 id="source-6">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes</a></p>
+
+<h2 id="footnotes-side-notes">Footnotes: side notes</h2>
+
+<p>When dealing with side notes (longer annotations on entire sections of text) it makes sense to use aside element.</p>
+
+<h3 id="example-uses-8">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;speaker&quot;</span><span class="nt">&gt;</span>Customer<span class="nt">&lt;/span&gt;</span>: I will not buy this record, it is scratched.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;speaker&quot;</span><span class="nt">&gt;</span>Shopkeeper<span class="nt">&lt;/span&gt;</span>: I&#39;m sorry?
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;speaker&quot;</span><span class="nt">&gt;</span>Customer<span class="nt">&lt;/span&gt;</span>: I will not buy this record, it is scratched.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;speaker&quot;</span><span class="nt">&gt;</span>Shopkeeper<span class="nt">&lt;/span&gt;</span>: No no no, this&#39;s&#39;a tobacconist&#39;s.
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;aside&gt;</span>
+  <span class="nt">&lt;p&gt;</span>In 1970, the British Empire lay in ruins, and foreign
+   nationalists frequented the streets — many of them Hungarians
+   (not the streets — the foreign nationals). Sadly, Alexander
+   Yalt has been publishing incompetently-written phrase books.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/aside&gt;</span>
+</code></pre></div>
+
+<h3 id="source-7">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes</a></p>
+
+<h2 id="glossary">Glossary of terms</h2>
+
+<p>While marking up a glossary the definition list (<code>dl</code>) is appropriate element. However one shall not forget using use <code>dfn</code> to indicate that the word is defined here.</p>
+
+<h3 id="example-uses-9">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h2&gt;</span>Glossary<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;&lt;dfn&gt;</span>Progressive enhancement<span class="nt">&lt;/dfn&gt;&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>A strategy for web design that emphasizes accessibility, semantic HTML markup, and external stylesheet and scripting technologies.<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>
+    A methodology that allows Web developers to concentrate on building the best possible websites while balancing the issues inherent in those websites
+    being accessed by multiple unknown user-agents.
+  <span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt&gt;&lt;dfn&gt;</span>Fault-tolerance<span class="nt">&lt;/dfn&gt;&lt;/dt&gt;</span>
+  <span class="nt">&lt;dt&gt;&lt;dfn&gt;</span>Graceful degradation<span class="nt">&lt;/dfn&gt;&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>The property that enables a system (often computer-based) to continue operating properly in the event of the failure of (or one or more faults within) some of its components<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div>
+
+<h3 id="source-8">Source</h3>
+<p><a href="http://html5doctor.com/the-dl-element/">http://html5doctor.com/the-dl-element/</a></p>
+
+<h2 id="holy-grail-layout">Holy Grail Layout</h2>
+
+<p>Here the template of a generic <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">or as MDN has put it - Holy Grail Layout</a>.</p>
+
+<h3 id="example-uses-10">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Your menu<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+
+<span class="nt">&lt;section&gt;</span>
+
+  <span class="nt">&lt;article&gt;</span>
+    <span class="nt">&lt;header&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Article title<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Posted on <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;2009-09-04T16:31:24+02:00&quot;</span><span class="nt">&gt;</span>September 4th 2009<span class="nt">&lt;/time&gt;</span> by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Writer<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#comments&quot;</span><span class="nt">&gt;</span>6 comments<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
+
+  <span class="nt">&lt;article&gt;</span>
+    <span class="nt">&lt;header&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>Article title<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Posted on <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;2009-09-04T16:31:24+02:00&quot;</span><span class="nt">&gt;</span>September 4th 2009<span class="nt">&lt;/time&gt;</span> by <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Writer<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#comments&quot;</span><span class="nt">&gt;</span>6 comments<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
+
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;aside&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>About section<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/aside&gt;</span>
+
+<span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Copyright 2009 Your name<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div>
+
+<h3 id="source-9">Source</h3>
+<p><a href="http://css-tricks.com/snippets/html/html5-page-structure">http://css-tricks.com/snippets/html/html5-page-structure</a></p>
+
+<h2 id="meta-data">Metadata</h2>
+
+<p>Using definition list (<code>dl</code>) keep in mind that it one definition may be supported with  multiple descriptions and
+contrariwise multiple variations of a definition may have the same description.</p>
+
+<h3 id="example-uses-11">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Authors:<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Remy Sharp<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Rich Clark<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Editor:<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Brandan Lennox<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Category:<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Comment<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre></div>
+
+<h3 id="source-10">Source</h3>
+<p><a href="http://html5doctor.com/the-dl-element/">http://html5doctor.com/the-dl-element/</a></p>
+
+<h2 id="quotation">Quotation</h2>
+
+<p>Elements <code>blockquote</code> and <code>cite</code> were reconsidered in the latest HTML5 specification.
+Here an example of appropriate use of them in a combination.</p>
+
+<h3 id="example-uses-12">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>JavaScript: The World&#39;s Most Misunderstood Programming Language<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+  — <span class="nt">&lt;cite&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.crockford.com/javascript/javascript.html&quot;</span><span class="nt">&gt;</span>Douglas Crockford<span class="nt">&lt;/a&gt;&lt;/cite&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre></div>
+
+<h3 id="source-11">Source</h3>
+<p><a href="http://html5doctor.com/cite-and-blockquote-reloaded/">http://html5doctor.com/cite-and-blockquote-reloaded/</a></p>
+
+<h2 id="subheadings">Subheadings, subtitles, alternative titles and taglines</h2>
+
+<p>The template show how group heading lines according to the W3C recommendations.
+### Example Uses</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>3D films set for popularity slide <span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>
+    First drop in 3D box office projected for this year despite hotly tipped summer blockbusters,
+   according to Fitch Ratings report
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre></div>
+
+<h3 id="source-12">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head</a></p>
+
+<h2 id="tag-cloud">Tag clouds</h2>
+
+<p>HTML has no special elements for marking up lists of keywords that apply to a
+group of pages (aka tag clouds). W3C recommends relying on list (<code>ul</code>) with explicit inline counts that are then hidden and turned into a
+presentational effect using a style sheet, or to use SVG.</p>
+
+<h3 id="example-uses-13">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;style&gt;</span>
+<span class="k">@media</span> <span class="nt">screen</span><span class="o">,</span> <span class="nt">print</span><span class="o">,</span> <span class="nt">handheld</span><span class="o">,</span> <span class="nt">tv</span> <span class="p">{</span>
+  <span class="c">/* should be ignored by non-visual browsers */</span>
+  <span class="nc">.tag-cloud</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud-1</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">0.7em</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud-2</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">0.9em</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud-3</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">1.1em</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud-4</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">1.3em</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nc">.tag-cloud-5</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+...
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;tag-cloud&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;tag-cloud-4&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">title=</span><span class="s">&quot;28 instances&quot;</span> <span class="na">href=</span><span class="s">&quot;/t/apple&quot;</span><span class="nt">&gt;</span>apple<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span&gt;</span>(popular)<span class="nt">&lt;/span&gt;</span>
+ <span class="nt">&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">&quot;tag-cloud-2&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">title=</span><span class="s">&quot;6 instances&quot;</span> <span class="na">href=</span><span class="s">&quot;/t/kiwi&quot;</span><span class="nt">&gt;</span>kiwi<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span&gt;</span>(rare)<span class="nt">&lt;/span&gt;</span>
+ <span class="nt">&lt;/li&gt;&lt;li</span> <span class="na">class=</span><span class="s">&quot;tag-cloud-5&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">title=</span><span class="s">&quot;41 instances&quot;</span> <span class="na">href=</span><span class="s">&quot;/t/pear&quot;</span><span class="nt">&gt;</span>pear<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span&gt;</span>(very popular)<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/li&gt;&lt;/ul&gt;</span>
+</code></pre></div>
+
+<h3 id="source-13">Source</h3>
+<p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up</a></p>
+
+<h2 id="video">Video</h2>
+
+<p>Here just an universal snippet for video element with all the relevant fall-backs.
+### Example Uses</p>
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls=&quot;controls&quot;` and autoplay likewise --&gt;</span>
+<span class="c">&lt;!-- warning: playback does not work on iOS3 if you include the poster attribute! fixed in iOS4.0 --&gt;</span>
+<span class="nt">&lt;video</span> <span class="na">width=</span><span class="s">&quot;640&quot;</span> <span class="na">height=</span><span class="s">&quot;360&quot;</span> <span class="na">controls</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- MP4 must be first for iPad! --&gt;</span>
+	<span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;__VIDEO__.MP4&quot;</span> <span class="na">type=</span><span class="s">&quot;video/mp4&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- Safari / iOS video    --&gt;</span>
+	<span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;__VIDEO__.OGV&quot;</span> <span class="na">type=</span><span class="s">&quot;video/ogg&quot;</span> <span class="nt">/&gt;</span><span class="c">&lt;!-- Firefox / Opera / Chrome10 --&gt;</span>
+	<span class="c">&lt;!-- fallback to Flash: --&gt;</span>
+	<span class="nt">&lt;object</span> <span class="na">width=</span><span class="s">&quot;640&quot;</span> <span class="na">height=</span><span class="s">&quot;360&quot;</span> <span class="na">type=</span><span class="s">&quot;application/x-shockwave-flash&quot;</span> <span class="na">data=</span><span class="s">&quot;__FLASH__.SWF&quot;</span><span class="nt">&gt;</span>
+		<span class="c">&lt;!-- Firefox uses the `data` attribute above, IE/Safari uses the param below --&gt;</span>
+		<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;movie&quot;</span> <span class="na">value=</span><span class="s">&quot;__FLASH__.SWF&quot;</span> <span class="nt">/&gt;</span>
+		<span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">&quot;flashvars&quot;</span> <span class="na">value=</span><span class="s">&quot;controlbar=over&amp;amp;image=__POSTER__.JPG&amp;amp;file=__VIDEO__.MP4&quot;</span> <span class="nt">/&gt;</span>
+		<span class="c">&lt;!-- fallback image. note the title field below, put the title of the video there --&gt;</span>
+		<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;__VIDEO__.JPG&quot;</span> <span class="na">width=</span><span class="s">&quot;640&quot;</span> <span class="na">height=</span><span class="s">&quot;360&quot;</span> <span class="na">alt=</span><span class="s">&quot;__TITLE__&quot;</span>
+		     <span class="na">title=</span><span class="s">&quot;No video playback capabilities, please download the video below&quot;</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;/object&gt;</span>
+<span class="nt">&lt;/video&gt;</span>
+<span class="c">&lt;!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want --&gt;</span>
+<span class="nt">&lt;p&gt;</span>	<span class="nt">&lt;strong&gt;</span>Download Video:<span class="nt">&lt;/strong&gt;</span>
+	Closed Format:	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;__VIDEO__.MP4&quot;</span><span class="nt">&gt;</span>&quot;MP4&quot;<span class="nt">&lt;/a&gt;</span>
+	Open Format:	<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;__VIDEO__.OGV&quot;</span><span class="nt">&gt;</span>&quot;Ogg&quot;<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+
+<h3 id="source-14">Source</h3>
+<p><a href="http://css-tricks.com/snippets/html/video-for-everybody-html5-video-with-flash-fallback/">http://css-tricks.com/snippets/html/video-for-everybody-html5-video-with-flash-fallback/</a></p>
+
+
+      </article>
+    </section>
+    <a class="docs-top affix" href="#start">
+        Back to top
+    </a>
+              <footer id="footer" class="doc">
+            <p>
+              <small><a rel="license" href="http://opensource.org/licenses/MIT">The MIT License.</a></small>
+            </p>
+            <p class="vcard">Contributed by <a href="http://dsheiko.com" class="fn url">Dmitry Sheiko</a></p>
+          </footer>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/bootstrap-affix.js"></script>
+        <script src="./assets/js/bootstrap-scrollspy.js"></script>
+
+  </body>
+</html>

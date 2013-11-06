@@ -67,7 +67,7 @@
     "Considering micro-formats and new elements and attributes introduced in HTML5 it may take much time" +
     "to design semantically valid markup even working on generic tasks." +
     "This collection of semantic HTML idioms (patterns) is meant to save this time.\n\n" +
-    "* Source: https://github.com/dsheiko/h5i\n* Website: http://h5i.dsheiko.github.com\n* Twitter: @sheiko\n\n\n"
+    "* Source: https://github.com/dsheiko/h5i\n* Homepage: http://dsheiko.github.io/h5i/\n* Twitter: [@sheiko](https://twitter.com/sheiko)\n\n\n"
       );
 
     return {

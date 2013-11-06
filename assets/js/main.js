@@ -1,1 +1,1 @@
-!function(a){var b=a.jQuery;b(a.document).ready(function(){a.setTimeout(function(){b(".docs-top").affix()},100)}),b("select[name=search]").on("change",function(){a.location=b(this).val()})}(this);
+!function(a){"use strict";var b=a.jQuery;b(a.document).ready(function(){a.setTimeout(function(){b(".docs-top").affix()},100)}),b("select[name=search]").on("change",function(){a.location=b(this).val()})}(this);

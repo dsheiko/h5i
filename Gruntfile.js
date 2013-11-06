@@ -5,10 +5,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks("grunt-contrib-jsic");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
 
   grunt.initConfig({
      compass: {
@@ -30,7 +27,7 @@ module.exports = function( grunt ) {
         options: {
           jshintrc: ".jshintrc"
         },
-        app: ["./App/View/Js/**/**/**/*.js"]
+        build: ['./builder/_sources/Js/**/**/*.js']
      },
      uglify: {
       build: {
@@ -75,7 +72,7 @@ module.exports = function( grunt ) {
   });
 
   grunt.registerTask("debug", ["compass:debug", "jekyll"]);
-  grunt.registerTask("build", ["compass:build", "uglify:build", "jekyll"]);
+  grunt.registerTask("build", ["compass:build", "jshint:build", "uglify:build", "jekyll"]);
   grunt.registerTask("default", ["debug"]);
 
 };

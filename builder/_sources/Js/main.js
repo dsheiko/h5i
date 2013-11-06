@@ -1,4 +1,5 @@
 (function ( global ) {
+  "use strict";
   var $ = global.jQuery;
 
   $( global.document ).ready( function(){

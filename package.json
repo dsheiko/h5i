@@ -31,6 +31,6 @@
     "grunt-contrib-jshint": "*",
     "grunt-contrib-compass": ">=0.3",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-uglify": "*",
+    "grunt-contrib-uglify": "*"
   }
 }

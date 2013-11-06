@@ -45,9 +45,6 @@
             border-right: 1px solid $colorBold;
             font-weight: 500;
           }
-          h1 {
-            text-transform: uppercase;
-          }
         }
       }
     }
@@ -62,6 +59,9 @@
     p {
       font-size: 22px;
       line-height: 120%;
+    }
+    h1 {
+      text-transform: uppercase;
     }
   }
   .article {

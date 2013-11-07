@@ -14,7 +14,7 @@ Here a comprehensive template for article (news, post, entry) details relying on
 ```html
 <article class="hentry">
   <header>
-    <h2 class="entry-title">But Will It Make You Happy?</h2>
+    <h1 class="entry-title">But Will It Make You Happy?</h1>
     <time class="updated" datetime="2010-08-07 11:11:03-0400" pubdate>08-07-2010</time>
     <p class="byline author vcard">
         By <span class="fn">Stephanie Rosenbloom</span>

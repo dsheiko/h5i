@@ -63,10 +63,7 @@
   Readme = function( projectRoot ) {
     var dest = path.resolve( projectRoot, "..", "README.md" );
     utils.createFile( dest, "# Semantic HTML5 Templates\n" +
-    "High quality HTML markup means semantic HTML (one that defines meaning of the information in webpages rather than its representation)." +
-    "Considering micro-formats and new elements and attributes introduced in HTML5 it may take much time" +
-    "to design semantically valid markup even working on generic tasks." +
-    "This collection of semantic HTML idioms (patterns) is meant to save this time.\n\n" +
+    "Collection of templates and snippets of semantic HTML that can be used as boilerplate while working on markup\n\n" +
     "* Source: https://github.com/dsheiko/h5i\n* Homepage: http://dsheiko.github.io/h5i/\n* Twitter: [@sheiko](https://twitter.com/sheiko)\n\n\n"
       );
 

@@ -41,6 +41,7 @@
 <option value="#figure"> Figure + WAI-ARIA</option>
 <option value="#footnotes-annotations"> Footnotes: annotations</option>
 <option value="#footnotes-side-notes"> Footnotes: side notes</option>
+<option value="#form"> Form</option>
 <option value="#glossary"> Glossary of terms</option>
 <option value="#holy-grail-layout"> Holy Grail Layout</option>
 <option value="#meta-data"> Metadata</option>
@@ -60,6 +61,7 @@
 <li><a href="#figure"> Figure + WAI-ARIA</a></li>
 <li><a href="#footnotes-annotations"> Footnotes: annotations</a></li>
 <li><a href="#footnotes-side-notes"> Footnotes: side notes</a></li>
+<li><a href="#form"> Form</a></li>
 <li><a href="#glossary"> Glossary of terms</a></li>
 <li><a href="#holy-grail-layout"> Holy Grail Layout</a></li>
 <li><a href="#meta-data"> Metadata</a></li>
@@ -368,11 +370,37 @@ to some particular <code>figure</code> related with <code>figcaption</code> we g
 <h3 id="source-7">Source</h3>
 <p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#footnotes</a></p>
 
+<h2 id="form">Form</h2>
+
+<p>HTML5 introduces quite many new elements and attributes related to input and forms. Here an example of a form based on the spec.</p>
+
+<h3 id="example-uses-9">Example Uses</h3>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;example1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Name:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Name&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span>  <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>Email:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span> <span class="na">autofocus=</span><span class="s">&quot;true&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">name=</span><span class="s">&quot;email&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Age:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">name=</span><span class="s">&quot;age&quot;</span> <span class="na">min=</span><span class="s">&quot;18&quot;</span> <span class="na">max=</span><span class="s">&quot;100&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>Promo code:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;promocode&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">pattern=</span><span class="s">&quot;[A-Z]{3}[0-9]{4}&quot;</span>
+<span class="na">title=</span><span class="s">&quot;Promo code consist of 3 uppercase letters followed by 4 digits.&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>Tel:<span class="nt">&lt;/label&gt;</span>
+     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;tel&quot;</span> <span class="na">name=</span><span class="s">&quot;tel&quot;</span> <span class="na">required=</span><span class="s">&quot;true&quot;</span> <span class="na">pattern=</span><span class="s">&quot;^\+(?:[0-9] ?){6,14}[0-9]$&quot;</span>
+<span class="na">title=</span><span class="s">&quot;Please enter valid tel.&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div>
+
+<h3 id="source-8">Source</h3>
+<p><a href="http://www.html5rocks.com/en/tutorials/forms/html5forms/#toc-inputs-attributes-elements">http://www.html5rocks.com/en/tutorials/forms/html5forms/#toc-inputs-attributes-elements</a></p>
+
 <h2 id="glossary">Glossary of terms</h2>
 
 <p>While marking up a glossary the definition list (<code>dl</code>) is appropriate element. However one shall not forget using use <code>dfn</code> to indicate that the word is defined here.</p>
 
-<h3 id="example-uses-9">Example Uses</h3>
+<h3 id="example-uses-10">Example Uses</h3>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;h2&gt;</span>Glossary<span class="nt">&lt;/h2&gt;</span>
 <span class="nt">&lt;dl&gt;</span>
@@ -389,14 +417,14 @@ to some particular <code>figure</code> related with <code>figcaption</code> we g
 <span class="nt">&lt;/dl&gt;</span>
 </code></pre></div>
 
-<h3 id="source-8">Source</h3>
+<h3 id="source-9">Source</h3>
 <p><a href="http://html5doctor.com/the-dl-element/">http://html5doctor.com/the-dl-element/</a></p>
 
 <h2 id="holy-grail-layout">Holy Grail Layout</h2>
 
 <p>Here the template of a generic <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">or as MDN has put it - Holy Grail Layout</a>.</p>
 
-<h3 id="example-uses-10">Example Uses</h3>
+<h3 id="example-uses-11">Example Uses</h3>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;header&gt;</span>
   <span class="nt">&lt;nav&gt;</span>
@@ -436,7 +464,7 @@ to some particular <code>figure</code> related with <code>figcaption</code> we g
 <span class="nt">&lt;/footer&gt;</span>
 </code></pre></div>
 
-<h3 id="source-9">Source</h3>
+<h3 id="source-10">Source</h3>
 <p><a href="http://css-tricks.com/snippets/html/html5-page-structure">http://css-tricks.com/snippets/html/html5-page-structure</a></p>
 
 <h2 id="meta-data">Metadata</h2>
@@ -444,7 +472,7 @@ to some particular <code>figure</code> related with <code>figcaption</code> we g
 <p>Using definition list (<code>dl</code>) keep in mind that it one definition may be supported with  multiple descriptions and
 contrariwise multiple variations of a definition may have the same description.</p>
 
-<h3 id="example-uses-11">Example Uses</h3>
+<h3 id="example-uses-12">Example Uses</h3>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;dl&gt;</span>
   <span class="nt">&lt;dt&gt;</span>Authors:<span class="nt">&lt;/dt&gt;</span>
@@ -457,7 +485,7 @@ contrariwise multiple variations of a definition may have the same description.<
 <span class="nt">&lt;/dl&gt;</span>
 </code></pre></div>
 
-<h3 id="source-10">Source</h3>
+<h3 id="source-11">Source</h3>
 <p><a href="http://html5doctor.com/the-dl-element/">http://html5doctor.com/the-dl-element/</a></p>
 
 <h2 id="quotation">Quotation</h2>
@@ -465,7 +493,7 @@ contrariwise multiple variations of a definition may have the same description.<
 <p>Elements <code>blockquote</code> and <code>cite</code> were reconsidered in the latest HTML5 specification.
 Here an example of appropriate use of them in a combination.</p>
 
-<h3 id="example-uses-12">Example Uses</h3>
+<h3 id="example-uses-13">Example Uses</h3>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
   <span class="nt">&lt;p&gt;</span>JavaScript: The World&#39;s Most Misunderstood Programming Language<span class="nt">&lt;/p&gt;</span>
@@ -475,7 +503,7 @@ Here an example of appropriate use of them in a combination.</p>
 <span class="nt">&lt;/blockquote&gt;</span>
 </code></pre></div>
 
-<h3 id="source-11">Source</h3>
+<h3 id="source-12">Source</h3>
 <p><a href="http://html5doctor.com/cite-and-blockquote-reloaded/">http://html5doctor.com/cite-and-blockquote-reloaded/</a></p>
 
 <h2 id="subheadings">Subheadings, subtitles, alternative titles and taglines</h2>
@@ -492,7 +520,7 @@ Here an example of appropriate use of them in a combination.</p>
 <span class="nt">&lt;/header&gt;</span>
 </code></pre></div>
 
-<h3 id="source-12">Source</h3>
+<h3 id="source-13">Source</h3>
 <p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#sub-head</a></p>
 
 <h2 id="tag-cloud">Tag clouds</h2>
@@ -501,7 +529,7 @@ Here an example of appropriate use of them in a combination.</p>
 group of pages (aka tag clouds). W3C recommends relying on list (<code>ul</code>) with explicit inline counts that are then hidden and turned into a
 presentational effect using a style sheet, or to use SVG.</p>
 
-<h3 id="example-uses-13">Example Uses</h3>
+<h3 id="example-uses-14">Example Uses</h3>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;style&gt;</span>
 <span class="k">@media</span> <span class="nt">screen</span><span class="o">,</span> <span class="nt">print</span><span class="o">,</span> <span class="nt">handheld</span><span class="o">,</span> <span class="nt">tv</span> <span class="p">{</span>
@@ -523,7 +551,7 @@ presentational effect using a style sheet, or to use SVG.</p>
 <span class="nt">&lt;/li&gt;&lt;/ul&gt;</span>
 </code></pre></div>
 
-<h3 id="source-13">Source</h3>
+<h3 id="source-14">Source</h3>
 <p><a href="http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up">http://www.w3.org/html/wg/drafts/html/master/common-idioms.html#rel-up</a></p>
 
 <h2 id="video">Video</h2>
@@ -554,7 +582,7 @@ presentational effect using a style sheet, or to use SVG.</p>
 <span class="nt">&lt;/p&gt;</span>
 </code></pre></div>
 
-<h3 id="source-14">Source</h3>
+<h3 id="source-15">Source</h3>
 <p><a href="http://css-tricks.com/snippets/html/video-for-everybody-html5-video-with-flash-fallback/">http://css-tricks.com/snippets/html/video-for-everybody-html5-video-with-flash-fallback/</a></p>
 
 

@@ -19,6 +19,7 @@
    */
   SecondaryNav = function( projectRoot ) {
     var dest = path.resolve( projectRoot, "_includes" ,"select.html" );
+    console.log( dest + " created " );
     utils.createFile( dest, "" );
     return {
       add: function( title, index ) {
@@ -32,6 +33,7 @@
    */
   DocNav = function( projectRoot ) {
     var dest = path.resolve( projectRoot, "_includes" ,"docs-nav.html" );
+    console.log( dest + " created " );
     utils.createFile( dest, "" );
     return {
       add: function( title, index ) {
@@ -45,6 +47,7 @@
    */
   Doc = function( projectRoot ) {
     var dest = path.resolve( projectRoot, "index.md" );
+    console.log( dest + " created " );
     utils.createFile( dest, "---\n" +
       "layout: default\n" +
       "title: Semantic HTML5 Templates\n" +
@@ -62,6 +65,7 @@
    */
   Readme = function( projectRoot ) {
     var dest = path.resolve( projectRoot, "..", "README.md" );
+    console.log( dest + " created " );
     utils.createFile( dest, "# Semantic HTML5 Templates\n" +
     "Collection of templates and snippets of semantic HTML that can be used as boilerplate while working on markup\n\n" +
     "* Source: https://github.com/dsheiko/h5i\n* Homepage: http://dsheiko.github.io/h5i/\n* Twitter: [@sheiko](https://twitter.com/sheiko)\n\n\n"

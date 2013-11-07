@@ -1,5 +1,5 @@
 # Semantic HTML5 Templates
-High quality HTML markup means semantic HTML (one that defines meaning of the information in webpages rather than its representation).Considering micro-formats and new elements and attributes introduced in HTML5 it may take much timeto design semantically valid markup even working on generic tasks.This collection of semantic HTML idioms (patterns) is meant to save this time.
+Collection of templates and snippets of semantic HTML that can be used as boilerplate while working on markup
 
 * Source: https://github.com/dsheiko/h5i
 * Homepage: http://dsheiko.github.io/h5i/
